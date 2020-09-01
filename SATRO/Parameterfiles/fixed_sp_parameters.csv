@@ -1,0 +1,2 @@
+sp_flux,sp_fluxunit,sp_direction_ra,sp_direction_dec,sp_shape,sp_majoraxis,sp_minoraxis,sp_positionangle,sp_frequency,sp_frequency_unit
+1.0,Jy,180.0,-30.0,point,0.5arcmin,0.5arcmin,0.0deg,1.0,GHz

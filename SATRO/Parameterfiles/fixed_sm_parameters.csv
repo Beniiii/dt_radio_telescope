@@ -1,0 +1,19 @@
+Name,Value,Units
+sm_flux,1.0,
+sm_fluxunit,Jy,
+sm_polarization,Stokes,
+sm_direction_ra,180.0,
+sm_direction_dec,-30.0,
+sm_size,1000,
+sm_cellsize,0.1,arcsec
+sm_shape,Gaussian,
+sm_majoraxis,0.5,arcmin
+sm_minoraxis,0.5,arcmin
+sm_positionangle,0.0,deg
+sm_frequency,1.0,GHz
+component_frequency,1.0,GHz
+frequency_increment,128,MHz
+sm_index,1.0,
+sm_spectrumtype,spectral index,
+sm_label,,
+

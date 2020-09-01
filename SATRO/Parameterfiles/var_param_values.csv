@@ -1,0 +1,4 @@
+Name,Min,Max,Steps,Units
+f,1,10,5,Jy
+frq,4,15,4,GHz
+smin,5,8,3,arcsec
