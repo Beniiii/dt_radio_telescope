@@ -1,5 +1,6 @@
 import Tkinter as tk
 import tkFileDialog
+import tkMessageBox
 import ttk
 import os
 
@@ -81,7 +82,7 @@ class SummaryPage(tk.Frame):
 
         # Output-path widget
         self.grid_bottom_path = tk.Frame(self)
-        self.path = os.getcwd()
+        self.path = os.path.dirname(os.getcwd())
         self.label_browse = tk.Label(self.grid_bottom_path, text="Output folder path: ")
         self.entry_browse = tk.Entry(self.grid_bottom_path)
         self.entry_browse.insert(0, self.path)
@@ -165,8 +166,13 @@ class SummaryPage(tk.Frame):
     def browse_output_path(self):
         """Select directory for storing the output data after the radio observations."""
         filename = tkFileDialog.askdirectory(initialdir=self.path)
-        self.entry_browse.delete(0, tk.END)
-        self.entry_browse.insert(0, filename)
+        if filename == os.getcwd():
+            tkMessageBox.showerror("Invalid Directory", "Please choose a path outside of the application directory "
+                                                        "\"SATRO\".")
+            return
+        if filename:
+            self.entry_browse.delete(0, tk.END)
+            self.entry_browse.insert(0, filename)
 
     def save_output_path_to_model(self):
         """Saves the output-path to the input model."""

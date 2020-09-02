@@ -210,7 +210,7 @@ def create_masked_data(wcs, data, sources, invert=False):
             size_value, units = get_decimal_from_string(source['sp_majoraxis'])
             if units.strip() == "arcsec":
                 size = size_value / 3600
-            elif units is "arcmin":
+            elif units.strip() == "arcmin":
                 size = size_value / 60
             else:
                 raise ValueError(units + " is invalid as units for sp_majoraxis. Use arcmin or arcsec.")
